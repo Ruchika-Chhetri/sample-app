@@ -7,6 +7,8 @@
 ///////////////// Helper variables
 // ///////////////////////////////////////////////
 var $assetsPath ='vendor',
+var $assetsPath2='vendor2',
+var $assetsPath3='vendor3',
      $window = $(window),
      $windowHeight = $(window).height(),
      $windowWidth = $(window).width(),
@@ -427,7 +429,7 @@ var ECHOHelper = {
 // ///////////////////////////////////////////////
     owlCarousel:function(){
         if($('.owl-carousel').exists()){
-        loadScript($assetsPath + '/owl.carousel/dist/owl.carousel.min.js', function(){
+        loadScript($assetsPath2 + '/owl.carousel/dist/owl.carousel.min.js', function(){
         $('.owl-carousel').each(function () {
           var $this = $(this),
               $items = ($this.data('items')) ? $this.data('items') : 3,
@@ -489,7 +491,7 @@ var ECHOHelper = {
     
     if($('.jarallax').exists()){
       
-      loadScript($assetsPath+'/jarallax/dist/jarallax.min.js', function(){
+      loadScript($assetsPath2+'/jarallax/dist/jarallax.min.js', function(){
 
            $('.jarallax').jarallax();
 
@@ -524,7 +526,7 @@ var ECHOHelper = {
 
   jsCircle:function(){
     if($('.js-circle').exists()){
-      loadScript($assetsPath+'/circles-js/circles.min.js', function(){
+      loadScript($assetsPath2+'/circles-js/circles.min.js', function(){
           var elm = $('.js-circle');
         elm.each(function(i){
           var $this = $(this);
@@ -569,7 +571,7 @@ var ECHOHelper = {
 // ///////////////////////////////////////////////
   chosenSelect:function(){
     if($('.ec-select').exists()){
-      loadScript($assetsPath+'/chosen/chosen.jquery.min.js', function(){
+      loadScript($assetsPath2+'/chosen/chosen.jquery.min.js', function(){
                $('.ec-select1').chosen({
                  width:"100%"
                });
@@ -698,8 +700,8 @@ var ECHOHelper = {
 // ///////////////////////////////////////////////
   dateTimePicker:function(){
     if($('[data-toggle="datetimepicker"]').exists()){
-      loadScript($assetsPath+'/moment/moment.min.js', function(){        
-        loadScript($assetsPath+'/tempus-dominus-datetimepicker/js/tempusdominus-bootstrap-4.min.js', function(){
+      loadScript($assetsPath2+'/moment/moment.min.js', function(){        
+        loadScript($assetsPath2+'/tempus-dominus-datetimepicker/js/tempusdominus-bootstrap-4.min.js', function(){
           // Date time both 
             $('#ec-datetimepicker').datetimepicker({
               icons: {
@@ -841,7 +843,7 @@ var ECHOHelper = {
 // ///////////////////////////////////////////////
 countDown: function(){
     if($('[data-countdown]').exists()){
-        loadScript($assetsPath+'/jquery.countdown/dist/jquery.countdown.min.js', function(){
+        loadScript($assetsPath3+'/jquery.countdown/dist/jquery.countdown.min.js', function(){
             $('[data-countdown]').each(function() {
             var $this = $(this), finalDate = $(this).data('countdown');
             $this.countdown(finalDate, function(event) {
@@ -871,8 +873,8 @@ countDown: function(){
   counterUp:function(){
     if($('.ec-counter').exists()){
       var $elm = $('.ec-counter');
-      loadScript($assetsPath+'/countTo/countTo.min.js', function(){
-       loadScript($assetsPath+'/appear-master/dist/appear.min.js', function(){
+      loadScript($assetsPath2+'/countTo/countTo.min.js', function(){
+       loadScript($assetsPath2+'/appear-master/dist/appear.min.js', function(){
         appear({
           elements: function elements(){
             return $elm;
